@@ -40,11 +40,11 @@ Results should not be interpreted as community-level flood exposure without addi
 ---
 
 ## Repository structure
-bangladesh-flood-exposure/
-├── data/              # Frequency raster (GeoTIFF) and upazila boundaries
-├── gee-scripts/       # Google Earth Engine JavaScript pipeline
-├── notebooks/         # Python analysis (zonal statistics, Moran's I)
-└── outputs/           # Maps and figures
+
+**data/** — Frequency raster (GeoTIFF) and upazila boundaries  
+**gee-scripts/** — Google Earth Engine JavaScript pipeline  
+**notebooks/** — Python analysis (zonal statistics, Moran's I)  
+**outputs/** — Maps and figures  
 
 **Tools:** Google Earth Engine · Python 3.11 · GeoPandas · Rasterio · rasterstats · PySAL · QGIS
 
