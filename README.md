@@ -58,7 +58,7 @@ Results should not be interpreted as community-level flood exposure without addi
 - [x] Moran's I spatial autocorrelation
 - [x] Sensitivity testing — Jaccard ~0.78, RAE 22–28% under ±2dB threshold variation
 - [x] Choropleth map
-- [ ] QGIS cartographic output
+- [x] QGIS cartographic output
 - [ ] GitHub Pages
 
 *Part 1 of 3 in the Barisal series. Pre-MSc portfolio project. MSc GIS and Remote Sensing, TU Dublin, September 2026.*
