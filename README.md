@@ -1,15 +1,15 @@
 # Barisal SAR Surface Water Analysis
 ### Monsoon surface water signal, Barisal Division 2015–2025
 
-Barisal Division sits within the lower Ganges-Brahmaputra-Meghna delta, a low-lying riverine environment strongly influenced by seasonal monsoon inundation. This project uses 11 years of Sentinel-1 SAR imagery to map the spatial distribution of persistent monsoon surface water occurrence across the division's 43 upazilas. A secondary analysis tests whether that spatial pattern clusters non-randomly across administrative units.
+Barisal Division sits within the lower Ganges-Brahmaputra-Meghna delta, a low-lying riverine environment strongly influenced by seasonal monsoon inundation. Upazila-level aggregation reflects the administrative unit through which disaster preparedness planning and resource allocation operates in Bangladesh, rather than hydrological catchment boundaries. This project characterises the spatial distribution of persistent monsoon surface water occurrence across these administrative units — providing a systematic spatial baseline that could inform preparedness-oriented prioritisation.
 
-SAR is used rather than optical imagery because monsoon cloud cover makes optical sensors unreliable during the exact months when inundation occurs.
+SAR is used rather than optical imagery because monsoon cloud cover makes optical sensors unreliable during the exact months when inundation occurs. SAR is the most operationally reliable Earth observation approach for this region and season.
 
 ---
 
 ## What this analysis finds
 
-The derived surface water frequency surface exhibits strong spatial clustering in the eastern Meghna island upazilas.
+The derived surface water frequency surface exhibits strong spatial clustering in the eastern Meghna island upazilas of Barisal Division.
 
 Daulatkhan, Hijla and Tazumuddin show the highest mean detection frequency (6.4, 5.3 and 5.0 out of 11 monsoon seasons respectively), consistent with their position as low-lying islands surrounded by major river channels. Inland upazilas show substantially lower values. Barishal City Corporation returns a low frequency (0.46/11), consistent with known urban SAR scattering effects rather than necessarily reflecting lower inundation.
 
@@ -35,6 +35,8 @@ Moran's I = 0.51 (p = 0.001, 999 permutations) suggests strong positive spatial 
 
 This is an analysis of SAR backscatter under a fixed set of methodological choices. It cannot measure flood depth, duration or flow velocity. Dense vegetation canopy and urban structures both confound the signal. The resulting frequency surface reflects how the chosen preprocessing and thresholding scheme interprets low-backscatter SAR response as surface water presence, not an independent observation of inundation.
 
+Upazila-level aggregation introduces scale sensitivity — results may differ under alternative spatial units or zoning schemes. Queen contiguity weights and the chosen threshold are modelling decisions; the spatial autocorrelation result is shaped by these choices as well as the underlying signal. Larger upazilas occupy proportionally more visual space in choropleth maps regardless of their frequency values, which may affect map interpretation.
+
 Results should not be interpreted as community-level flood exposure without additional field validation. This analysis does not replace operational mapping products produced by UNOSAT or Copernicus EMS.
 
 ---
@@ -59,6 +61,11 @@ Results should not be interpreted as community-level flood exposure without addi
 - [x] Sensitivity testing — Jaccard ~0.78, RAE 22–28% under ±2dB threshold variation
 - [x] Choropleth map
 - [x] QGIS cartographic output
+- [ ] Sensitivity testing — Spearman rank correlation across threshold scenarios
+- [ ] Stability map — threshold-sensitive vs stable classifications
+- [ ] Temporal supplementary analysis
+- [ ] Empirical plausibility check against UNOSAT extents
+- [ ] methodology.md
 - [ ] GitHub Pages
 
 *Part 1 of 3 in the Barisal series. Pre-MSc portfolio project. MSc GIS and Remote Sensing, TU Dublin, September 2026.*
